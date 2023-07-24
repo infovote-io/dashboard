@@ -1,0 +1,212 @@
+---
+title: "FQE_V0"
+author: "DB"
+runtime: shiny
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    social: menu
+    source_code: embed
+---
+
+```{r setup, include=FALSE}
+library(highcharter)
+library(dplyr)
+library(viridisLite)
+library(forecast)
+library(treemap)
+library(arules)
+library(flexdashboard)
+
+thm <- 
+  hc_theme(
+    colors = c("#1a6ecc", "#434348", "#90ed7d"),
+    chart = list(
+      backgroundColor = "transparent",
+      style = list(fontFamily = "Source Sans Pro")
+    ),
+    xAxis = list(
+      gridLineWidth = 1
+    )
+  )
+
+```
+
+```{r global, include=FALSE}
+# load data in 'global' chunk so it can be shared by all users of the dashboard
+#rm(list=ls())
+library(shiny)
+library(httr)
+library(jsonlite)
+library(dplyr)
+library(ggplot2)
+library(shinythemes)
+library(tidyr)
+
+# Retrieve RDI data from FRED API
+api_key <- "b613f51921dab64aeae0bb2fe2894ea7"
+series_id <- "A229RX0"
+today <- format(Sys.Date(), "%Y-%m-%d")
+url <- paste0("https://api.stlouisfed.org/fred/series/observations?series_id=", series_id, "&api_key=", api_key, "&file_type=json&observation_start=1960-01-01&observation_end=", today, "&frequency=a")
+
+# Make GET request to the API
+data <- fromJSON(content(GET(url), "text"))
+
+# Fred Data
+df <- data$observations %>%
+  as.data.frame() %>%
+  mutate(date = format(as.Date(date), "%Y"),
+         value = as.numeric(value),
+         usvalue = value,
+         value = log(value / lag(value)) * 100) %>%
+  filter(date >= "1960") %>%
+  select(date, usvalue, value)
+
+# Generate years starting from 1964 with increments of 4 years
+years <- seq(1964, 2024, by = 4)
+
+presidents <- jsonlite::fromJSON('{"1960": "Dwight D. Eisenhower", "1964": "Lyndon B. Johnson - 1st term", "1968": "Lyndon B. Johnson - 2nd term", "1972": "Richard Nixon", "1976": "Gerald Ford", "1980": "Jimmy Carter", "1984": "Ronald Reagan - 1st term", "1988": "Ronald Reagan - 2nd term", "1992": "George H.W. Bush", "1996": "Bill Clinton - 1st term", "2000": "Bill Clinton - 2nd term", "2004": "George W. Bush - 1st term", "2008": "George W. Bush - 2nd term", "2012": "Barack Obama - 1st term", "2016": "Barack Obama - 2nd term", "2020": "Donald Trump", "2024": "Joe Biden"}')
+```
+
+
+Column{.sidebar}
+-----------------------------------------------------------------------
+
+```{r}
+selectInput(
+  "yearSelect",
+  "Year:",
+  choices = years,
+  selected = max(years) - 4
+)
+
+checkboxInput(
+  "showPresident",
+  "Show President's Name",
+  value = FALSE
+)
+```
+
+Column
+-----------------------------------------------------------------------
+
+### Yearly Personal Income Growth
+
+```{r}
+filteredData <- reactive({
+  df %>%
+    filter(date >= as.character(as.numeric(input$yearSelect) - 3), date <= as.character(input$yearSelect))
+})
+
+president_label <- reactive({
+  if (input$showPresident) {
+    paste0(" (", presidents[[as.character(input$yearSelect)]], ")")
+  } else {
+    ""
+  }
+})
+
+renderPlot({
+  ggplot(filteredData(), aes(x = date, y = value, group = 1)) +
+    geom_line(color = "steelblue", size = 1.5) +
+    geom_point(color = "steelblue", size = 3) +
+    geom_text(aes(label = round(value, 2), vjust = -0.5), size = 5, nudge_y = 0.5) +
+    labs(
+      x = "Year",
+      y = "% Change in Personal Income",
+      title = paste0(
+  "Yearly Personal Income Growth for ",
+  as.numeric(input$yearSelect) - 3, "-", input$yearSelect, president_label()
+      )
+    ) +
+    scale_y_continuous(expand = c(0.2, 0.2), labels = scales::label_number(accuracy = 0.1)) +
+    theme_classic() +
+    theme(
+      plot.title = element_text(hjust = 0, margin = margin(b = 20), size = 20),
+      axis.title = element_text(size = 18),
+      axis.text = element_text(size = 18)
+    )
+})
+```
+
+### Cumulative Personal Income Growth
+
+```{r}
+renderPlot({
+  ggplot(filteredData(), aes(x = date, y = cumsum(value), group = 1)) +
+    geom_line(color = "steelblue", size = 1.5) +
+    geom_point(color = "steelblue", size = 3) +
+    geom_text(aes(label = round(cumsum(value), 2), vjust = -0.5), size = 5, nudge_y = 0.5) +
+    labs(
+      x = "Year",
+      y = "% Change in Personal Income",
+      title = paste0(
+        "Cumulative Personal Income Growth for ",
+  as.numeric(input$yearSelect) - 3, "-", input$yearSelect, president_label()
+),
+      subtitle = ""
+    ) +
+    scale_y_continuous(expand = c(0.2, 0.2), labels = scales::label_number(accuracy = 0.1)) +
+    theme_classic() +
+    theme(
+      plot.title = element_text(hjust = 0, margin = margin(b = 20), size = 20),
+      plot.subtitle = element_text(hjust = 0, margin = margin(b = 20), size = 14, vjust = 0),
+      axis.title = element_text(size = 18),
+      axis.text = element_text(size = 18)
+    )
+})
+```
+
+
+Column
+-----------------------------------------------------------------------
+
+### Cumulative Growth Table
+
+```{r}
+renderTable({
+  start_year <- as.numeric(input$yearSelect) - 3
+  end_year <- as.numeric(input$yearSelect)
+  president <- presidents[[as.character(end_year)]]
+  president_label <- ifelse(input$showPresident, president, "")
+
+  filteredData <- df %>%
+    filter(date >= as.character(start_year), date <= as.character(end_year)) %>%
+    mutate(Cumulative_Growth = cumsum(value))
+
+  data.frame(
+    Year = start_year:end_year,
+    President = rep(president_label, length(start_year:end_year)),
+    Cumulative_Growth = filteredData$Cumulative_Growth
+  )
+})
+
+```
+
+Column
+-----------------------------------------------------------------------
+
+### Last Year of Each President
+
+```{r}
+renderTable({
+  max_year <- as.numeric(input$yearSelect)
+  
+  # Filter the data to include only the last year of each president
+  filteredData <- df %>%
+    filter(date <= as.character(max_year)) %>%
+    group_by(President = presidents[date]) %>%
+    summarize(Last_Year = max(as.numeric(date)),
+              Cumulative_Growth = last(cumsum(value)))
+  
+  # Convert Last_Year column to numeric
+  filteredData$Last_Year <- as.numeric(as.character(filteredData$Last_Year))
+  
+  # Select the columns to display
+  filteredData %>%
+    select(Last_Year, President, Cumulative_Growth)
+})
+
+
+```
+
