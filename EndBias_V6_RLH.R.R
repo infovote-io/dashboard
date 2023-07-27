@@ -39,6 +39,12 @@ df <- data$observations %>%
          value = log(value / lag(value)) * 100) %>%
   filter(date >= "1960") %>%
   select(date, usvalue, value)
+write.csv(df, "df_data.csv", row.names = FALSE)
+
+# Save df dataframe as CSV to your desired location
+file_path <- "C:/Users/danbo/OneDrive - Fundacao Getulio Vargas - FGV/Info_Vote/R Code/df_data.csv"
+# Save df dataframe as CSV at the specified location
+write.csv(df, file = file_path, row.names = FALSE)
 
 # Hypothetical data
 set.seed(5)
