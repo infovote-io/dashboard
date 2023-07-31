@@ -72,6 +72,9 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_div_format
+        - name: vegalite
+          class: vegalite
+          format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
@@ -85,6 +88,9 @@ extra_css:
 extra_javascript:
   - assets/style.js
   - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
+  - https://cdn.jsdelivr.net/npm/vega@5
+  - https://cdn.jsdelivr.net/npm/vega-lite@5
+  - https://cdn.jsdelivr.net/npm/vega-embed@6
 
 extra: # Footer
   version:
@@ -99,3 +105,4 @@ plugins:
       version_selector: true
   - search:
       lang: pt-BR
+  - charts
