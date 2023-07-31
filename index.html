@@ -70,6 +70,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#titulo-da-minha-pagina" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -257,10 +262,50 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="." class="md-nav__link md-nav__link--active">
         Home
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#um-subtitulo" class="md-nav__link">
+    Um subtítulo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outro-subtitulo" class="md-nav__link">
+    Outro subtítulo
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -283,6 +328,30 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#um-subtitulo" class="md-nav__link">
+    Um subtítulo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outro-subtitulo" class="md-nav__link">
+    Outro subtítulo
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -305,16 +374,47 @@
   
 
 
-  <h1>Home</h1>
-
-
+<h1 id="titulo-da-minha-pagina">Título da minha página<a class="headerlink" href="#titulo-da-minha-pagina" title="Permanent link">⚓︎</a></h1>
+<p>Esta é uma demonstração de como poderemos utilizar o markdown.
+<a href="google.com">Este é um link</a></p>
+<ul>
+<li>Esta é uma lista:<ul>
+<li>Minha lista 1</li>
+<li>Minha lista 1</li>
+<li>Minha lista 3</li>
+</ul>
+</li>
+</ul>
+<h3 id="um-subtitulo">Um subtítulo<a class="headerlink" href="#um-subtitulo" title="Permanent link">⚓︎</a></h3>
+<p>Esta é uma demonstração de como poderemos utilizar o markdown.
+Esta é uma demonstração de como poderemos utilizar o markdown.
+Esta é uma demonstração de como poderemos utilizar o markdown.</p>
+<h3 id="outro-subtitulo">Outro subtítulo<a class="headerlink" href="#outro-subtitulo" title="Permanent link">⚓︎</a></h3>
+<p>Esta é uma demonstração de como poderemos utilizar o markdown.
+Esta é uma demonstração de como poderemos utilizar o markdown.
+Esta é uma demonstração de como poderemos utilizar o markdown.</p>
+<p><vegachart style='width: 100%'  class="vegalite">{
+  "description": "A simple bar chart with embedded data.",
+  "data": {
+    "values": [
+      {"a": "A", "b": 28}, {"a": "B", "b": 55}, {"a": "C", "b": 43},
+      {"a": "D", "b": 91}, {"a": "E", "b": 81}, {"a": "F", "b": 53},
+      {"a": "G", "b": 19}, {"a": "H", "b": 87}, {"a": "I", "b": 52}
+    ]
+  },
+  "mark": {"type": "bar", "tooltip": true},
+  "encoding": {
+    "x": {"field": "a", "type": "nominal", "axis": {"labelAngle": 0}},
+    "y": {"field": "b", "type": "quantitative"}
+  }
+}</vegachart></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 31, 2023 21:02:18</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 31, 2023 21:26:51</span>
       
         <br>
         Created:
@@ -370,10 +470,22 @@
     
       <script src="assets/javascripts/bundle.51198bba.min.js"></script>
       
+        <script src="js/mkdocs-charts-plugin.js"></script>
+      
         <script src="assets/style.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js"></script>
       
+        <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+      
     
-  </body>
+  
+        <script>
+        var mkdocs_chart_plugin = {'data_path': '', 'use_data_path': 'True', 'vega_theme': 'default', 'vega_theme_dark': 'dark', 'vega_renderer': 'svg', 'vega_width': 'container', 'fallback_width': '800', 'path_to_homepage': '..\\.'}
+        </script>
+        </body>
 </html>
