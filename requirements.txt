@@ -2,9 +2,5 @@ mkdocs==1.4.2
 pymdown-extensions==9.11
 mkdocs-material==9.1.6
 mkdocs-git-revision-date-localized-plugin==1.2.0
-<<<<<<< HEAD
 mike==1.1.2
 mkdocs-charts-plugin==0.0.9
-=======
-mike==1.1.2
->>>>>>> d225df5b29c8df2a039eb08278c00dfe5fc82817

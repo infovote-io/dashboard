@@ -11,6 +11,7 @@ nav:
 # Configuration
 theme:
   name: material
+  language: pt
   # custom_dir: overrides
   features:
     # - announce.dismiss
@@ -104,5 +105,5 @@ plugins:
   - mike:
       version_selector: true
   - search:
-      lang: pt-BR
+      lang: pt
   - charts
