@@ -5,24 +5,30 @@ Esta é uma demonstração de como poderemos utilizar o markdown.
 
 - Esta é uma lista:
 	- Minha lista 1
-	- Minha lista 1
-	- Minha lista 3
 
-
-### Um subtítulo
-
-Esta é uma demonstração de como poderemos utilizar o markdown.
-Esta é uma demonstração de como poderemos utilizar o markdown.
-Esta é uma demonstração de como poderemos utilizar o markdown.
-
-### Outro subtítulo
-
-Esta é uma demonstração de como poderemos utilizar o markdown.
-Esta é uma demonstração de como poderemos utilizar o markdown.
+### RDI $US Values
 Esta é uma demonstração de como poderemos utilizar o markdown.
 
 ```vegalite
 {
   "schema-url": "assets/charts/lines.json"
+}
+```
+
+### RDI %Growth Values
+Esta é uma demonstração de como poderemos utilizar o markdown.
+
+```vegalite
+{
+  "schema-url": "assets/charts/growth.json"
+}
+```
+
+### RDI Cumulative %Growth Values
+Esta é uma demonstração de como poderemos utilizar o markdown.
+
+```vegalite
+{
+  "schema-url": "assets/charts/cumgrowth.json"
 }
 ```

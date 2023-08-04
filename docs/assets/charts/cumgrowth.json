@@ -1,0 +1,20 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "RDI Cumulative %Growth Values",
+    "data": {"url": "assets/charts/data/df_data.csv"},
+    "transform": [
+        {"window": [{"op": "sum", "field": "value", "as": "cumgrowth"}],
+         "sort": [{"field": "date"}]
+        }
+    ],
+    "mark": {
+        "type": "line",
+        "point": true,
+        "tooltip": true
+    },
+    "encoding": {
+        "x": {"timeUnit": "year", "field": "date"},
+        "y": {"field": "cumgrowth", "type": "quantitative"},
+        "color": {"field": "symbol", "type": "nominal"}
+    }
+}

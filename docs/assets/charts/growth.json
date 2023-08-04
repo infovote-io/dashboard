@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "RDI $US Values",
+    "description": "RDI %Growth Values",
     "data": {"url": "assets/charts/data/df_data.csv"},
     "mark": {
       "type": "line",
@@ -9,7 +9,7 @@
     },
     "encoding": {
       "x": {"timeUnit": "year", "field": "date"},
-      "y": {"aggregate":"mean", "field": "usvalue", "type": "quantitative"},
+      "y": {"aggregate":"mean", "field": "value", "type": "quantitative"},
       "color": {"field": "symbol", "type": "nominal"}
     }
-  }
+} 
