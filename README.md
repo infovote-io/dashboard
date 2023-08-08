@@ -11,7 +11,7 @@
 
 ## Description
 
-The Info Vote Shiny App is an interactive web application that visualizes the growth of Real Disposable Income (RDI) over the years for the United States. It retrieves data from the Federal Reserve Economic Data (FRED) API and provides insightful plots to explore the changes in personal income over time.
+Info Vote is an interactive web application to visualize the growth of Real Disposable Income (RDI) of the United States. It retrieves data from the Federal Reserve Economic Data (FRED) API and provides insightful plots to explore the changes in personal income over time.
 
 ## Features
 

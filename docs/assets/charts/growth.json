@@ -8,8 +8,8 @@
       "tooltip": true
     },
     "encoding": {
-      "x": {"timeUnit": "year", "field": "date"},
-      "y": {"aggregate":"mean", "field": "value", "type": "quantitative"},
+      "x": {"timeUnit": "year", "field": "utcyymm"},
+      "y": {"aggregate":"mean", "field": "growthvalue", "type": "quantitative"},
       "color": {"field": "symbol", "type": "nominal"}
     }
 } 

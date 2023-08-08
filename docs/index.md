@@ -1,13 +1,29 @@
-# Título da minha página
+### How would you evaluate these economies?
+- Let's start with a simple test, which of these two economies do you think it had a better performance?
+  - Evaluate each economy from 1 to 10
 
-Esta é uma demonstração de como poderemos utilizar o markdown.
-[Este é um link](google.com)
+```vegalite
+{
+  "schema-url": "assets/charts/carter7780.json"
+}
+```
+```vegalite
+{
+  "schema-url": "assets/charts/clinton9396.json"
+}
+```
 
-- Esta é uma lista:
-	- Minha lista 1
+### Filter by President - RDI $US Values
+- Here we can see the performance for each presidential term.
+
+```vegalite
+{
+  "schema-url": "assets/charts/filter.json"
+}
+```
 
 ### RDI $US Values
-Esta é uma demonstração de como poderemos utilizar o markdown.
+- Here we can see the value in us dollars of the RDI for each presidential term.
 
 ```vegalite
 {
@@ -16,7 +32,7 @@ Esta é uma demonstração de como poderemos utilizar o markdown.
 ```
 
 ### RDI %Growth Values
-Esta é uma demonstração de como poderemos utilizar o markdown.
+- Here we can see the value in %Growth of the RDI for each presidential term.
 
 ```vegalite
 {
@@ -25,35 +41,10 @@ Esta é uma demonstração de como poderemos utilizar o markdown.
 ```
 
 ### RDI Cumulative %Growth Values
-Esta é uma demonstração de como poderemos utilizar o markdown.
+- Here we can see the cumulative value in %Growth of the RDI for each presidential term.
 
 ```vegalite
 {
   "schema-url": "assets/charts/cumgrowth.json"
-}
-```
-
-```python
-{
-  import pandas as pd
-
-# Read the data from CSV file
-df_data = pd.read_csv("assets/charts/data/df_data.csv")
-
-# Sort the data by the "date" field
-df_data = df_data.sort_values(by="date")
-
-# Calculate cumulative growth for each group (assuming "symbol" represents groups)
-df_data["cumulative_growth"] = df_data.groupby("symbol")["value"].cumsum()
-
-# Save the preprocessed data to a new CSV file
-df_data.to_csv("assets/charts/data/df_data_cumulative.csv", index=False)
-
-}
-```
-
-```vegalite
-{
-  "schema-url": "assets/charts/cumgrowth2.json"
 }
 ```

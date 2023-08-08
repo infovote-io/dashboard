@@ -1,0 +1,16 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "assets/charts/data/df_data.csv",
+      "format": {"type": "csv"}
+    },
+    "transform": [
+      {"filter": "datum.date >= 1993 && datum.date <= 1996"}
+    ],
+    "mark": "line",
+    "encoding": {
+      "x": {"field": "utcyymm", "type": "temporal"},
+      "y": {"field": "growthvalue", "type": "quantitative"}
+    }
+  }
+  

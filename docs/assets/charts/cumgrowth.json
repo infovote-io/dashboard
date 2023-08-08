@@ -3,8 +3,8 @@
     "description": "RDI Cumulative %Growth Values",
     "data": {"url": "assets/charts/data/df_data.csv"},
     "transform": [
-        {"window": [{"op": "sum", "field": "value", "as": "cumgrowth"}],
-         "sort": [{"field": "date"}]
+        {"window": [{"op": "sum", "field": "growthvalue", "as": "cumgrowth"}],
+         "sort": [{"field": "utcyymm"}]
         }
     ],
     "mark": {
@@ -13,8 +13,8 @@
         "tooltip": true
     },
     "encoding": {
-        "x": {"timeUnit": "year", "field": "date"},
+        "x": {"timeUnit": "year", "field": "utcyymm"},
         "y": {"field": "cumgrowth", "type": "quantitative"},
-        "color": {"field": "symbol", "type": "nominal"}
+        "color": {"field": "presidents", "type": "nominal"}
     }
 }
