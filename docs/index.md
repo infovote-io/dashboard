@@ -40,6 +40,15 @@
 }
 ```
 
+  - - With Select
+  - Here we can see the value in %Growth of the RDI for each presidential term.
+
+```vegalite
+{
+  "schema-url": "assets/charts/selectgrowth.json"
+}
+```
+
 ### RDI Cumulative %Growth Values
 - Here we can see the cumulative value in %Growth of the RDI for each presidential term.
 

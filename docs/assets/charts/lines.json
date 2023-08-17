@@ -1,14 +1,18 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "RDI $US Values",
-    "data": {"url": "assets/charts/data/df_data.csv"},
-    "mark": {
-      "type": "line",
-      "point": true,
-      "tooltip": true
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "RDI $US Values",
+  "data": {"url": "assets/charts/data/df_data.csv"},
+  "mark": {
+    "type": "line",
+    "point": true,
+    "tooltip": true
+  },
+  "encoding": {
+    "x": {
+      "timeUnit": "year",
+      "field": "utcyymm",
+      "axis": {"title": "Year", "format": "%b %y"}
     },
-    "encoding": {
-      "x": {"timeUnit": "year", "field": "utcyymm"},
-      "y": {"aggregate":"mean", "field": "usvalue", "type": "quantitative"}
-    }
+    "y": {"aggregate": "mean", "field": "usvalue", "type": "quantitative"}
   }
+}
