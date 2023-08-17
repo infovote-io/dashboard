@@ -3,32 +3,35 @@
     "description": "Yearly and Cumulative Personal Income Growth",
     "data": {"url": "assets/charts/data/df_data.csv"},
     "transform": [
-      {"calculate": "year(datum.utcyymm)", "as": "year"}
+        {"calculate": "year(datum.utcyymm)", "as": "year"},
+        {"window": [{"op": "sum", "field": "growthvalue", "as": "cumulative_growth"}],
+         "sort": [{"field": "utcyymm"}],
+         "groupby": ["year"]
+        }
     ],
     "selection": {
-      "election_year": {
-        "type": "single",
-        "fields": ["year"],
-        "init": {"year": 2020},
-        "bind": {"input": "range", "min": 1964, "max": 2024, "step": 4, "name": "Election Year:"}
-      }
+        "election_year": {
+            "type": "single",
+            "fields": ["year"],
+            "init": {"year": 2020},
+            "bind": {"input": "range", "min": 1964, "max": 2024, "step": 4, "name": "Election Year:"}
+        }
     },
     "mark": {"type": "line", "point": true, "tooltip": true},
     "encoding": {
-      "x": {
-        "timeUnit": "year",
-        "field": "utcyymm",
-        "axis": {"title": "Year", "format": "%Y"}
-      },
-      "y": {
-        "field": "growthvalue",
-        "type": "quantitative",
-        "title": "% Change in Personal Income"
-      },
-      "color": {
-        "condition": {"selection": "election_year", "value": "red"},
-        "value": "steelblue"
-      }
+        "x": {
+            "timeUnit": "year",
+            "field": "utcyymm",
+            "axis": {"title": "Year", "format": "%Y"}
+        },
+        "y": {
+            "field": "growthvalue",
+            "type": "quantitative",
+            "title": "% Change in Personal Income"
+        },
+        "color": {
+            "condition": {"selection": "election_year", "value": "red"},
+            "value": "steelblue"
+        }
     }
-  }
-  
+}

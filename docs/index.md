@@ -1,5 +1,5 @@
 ### How would you evaluate these economies?
-- Let's start with a simple test, which of these two economies do you think it had a better performance?
+- Let's start with a simple test, what economy had a better performance?
   - Evaluate each economy from 1 to 10
 
 ```vegalite

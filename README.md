@@ -11,13 +11,13 @@
 
 ## Description
 
-Info Vote is an interactive web application to visualize the growth of Real Disposable Income (RDI) of the United States. It retrieves data from the Federal Reserve Economic Data (FRED) API and provides insightful plots to explore the changes in personal income over time.
+What do we need to know before voting? Info Vote is an interactive web application to visualize the growth of Real Disposable Income (RDI) of the United States. It retrieves data from the Federal Reserve Economic Data (FRED) API and provides insightful plots to explore the changes in personal income over time.
 
 ## Features
 
 - View yearly percentage change in personal income (RDI) from 1960 to the present.
 - Display cumulative growth in percentage (%) and level ($) over specific periods.
-- Choose specific election years to see income growth during different presidencies.
+- Choose specific election years to visualize income growth during different presidencies.
 
 ## Screenshots
 
