@@ -31,6 +31,18 @@
 }
 ```
 
+```vegalite
+{
+  "schema-url": "assets/charts/filter_lines.json"
+}
+```
+
+```vegalite
+{
+  "schema-url": "assets/charts/selectionbug.json"
+}
+```
+
 ### RDI %Growth Values
 - Here we can see the value in %Growth of the RDI for each presidential term.
 

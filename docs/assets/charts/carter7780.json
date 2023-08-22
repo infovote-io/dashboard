@@ -7,14 +7,35 @@
   "transform": [
     {"filter": "year(datum.utcyymm) >= 1977-1 && year(datum.utcyymm) <= 1980-1"}
   ],
-  "mark": "line",
-  "encoding": {
-    "x": {
-      "type": "ordinal",
-      "axis": {"format": "%Y"},
-      "field": "utcyymm",
-      "timeUnit": "utcyearmonth"
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {
+          "type": "ordinal",
+          "axis": {"format": "%Y"},
+          "field": "utcyymm",
+          "timeUnit": "utcyearmonth"
+        },
+        "y": {"field": "usvalue", "type": "quantitative"},
+        "color": {"value": "blue"}, 
+        "axis": {"title": "usvalue"}  
+      }
     },
-    "y": {"field": "growthvalue", "type": "quantitative"}
-  }
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {
+          "type": "ordinal",
+          "axis": {"format": "%Y"},
+          "field": "utcyymm",
+          "timeUnit": "utcyearmonth"
+        },
+        "y": {"field": "growthvalue", "type": "quantitative"},
+        "color": {"value": "orange"}, 
+        "axis": {"title": "growthvalue", "orient": "right"} 
+      }
+    }
+  ],
+  "resolve": {"scale": {"y": "independent"}} 
 }
