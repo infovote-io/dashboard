@@ -13,6 +13,18 @@
 }
 ```
 
+### Real Election's Margin vs RDI Growth and Economy Evaluations
+- Here we can see the performance for each presidential term.
+
+
+
+```vegalite
+{
+  "schema-url": "assets/charts/margingrowtheval.json"
+}
+```
+
+
 ### Filter by President - RDI $US Values
 - Here we can see the performance for each presidential term.
 

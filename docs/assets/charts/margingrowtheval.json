@@ -1,0 +1,21 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "repeat": ["RDI_y", "economy"],
+    "columns": 2,
+    "spec": {
+      "data": {
+        "url": "assets/charts/data/df_vote.csv"
+      },
+      "mark": "point",
+      "encoding": {
+        "x": {"field": {"repeat": "repeat"}, "type": "quantitative"},
+        "y": {"field": "inc_margin", "type": "quantitative"},
+        "tooltip": [
+          {"field": "year", "type": "temporal", "timeUnit": "utcyear", "title": "Year"},
+          {"field": "inc_margin", "type": "quantitative", "title": "inc_margin"}
+        ]
+      },
+      "title": {"text": {"repeat": "repeat"}}
+    }
+  }
+  
