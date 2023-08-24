@@ -1,21 +1,44 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "repeat": ["RDI_y", "economy"],
-    "columns": 2,
-    "spec": {
-      "data": {
-        "url": "assets/charts/data/df_vote.csv"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Figure 2",
+  "repeat": ["RDI_y", "economy"],
+  "columns": 2,
+  "spec": {
+    "data": {
+      "url": "assets/charts/data/df_vote.csv"
+    },
+    "mark": "point",
+    "width": 400,
+    "encoding": {
+      "x": {"field": {"repeat": "repeat"}, "type": "quantitative"},
+      "y": {"field": "inc_margin", "type": "quantitative"},
+      "color": {
+        "field": "year",
+        "type": "temporal",
+        "timeUnit": "utcyear",
+        "legend": null,
+        "scale": {"scheme": "category10"}
       },
-      "mark": "point",
-      "encoding": {
-        "x": {"field": {"repeat": "repeat"}, "type": "quantitative"},
-        "y": {"field": "inc_margin", "type": "quantitative"},
-        "tooltip": [
-          {"field": "year", "type": "temporal", "timeUnit": "utcyear", "title": "Year"},
-          {"field": "inc_margin", "type": "quantitative", "title": "inc_margin"}
-        ]
+      "size": {"value": 80},
+      "text": {
+        "field": "year",
+        "type": "temporal",
+        "timeUnit": "utcyear",
+        "format": "%Y"
       },
-      "title": {"text": {"repeat": "repeat"}}
-    }
+      "fontSize": {"value": 10},
+      "align": {"value": "center"},
+      "baseline": {"value": "bottom"},
+      "tooltip": [
+        {"field": "year", "type": "temporal", "timeUnit": "utcyear", "title": "Year"},
+        {"field": "inc_margin", "type": "quantitative", "title": "Inc Margin"},
+        {
+          "field": {"repeat": "repeat"},
+          "type": "quantitative",
+          "title": {"expr": "repeat === 'RDI_y' ? 'RDI_y' : 'Economy'"}
+        }
+      ]
+    },
+    "title": {"text": {"repeat": "repeat"}}
   }
-  
+}
