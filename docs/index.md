@@ -1,5 +1,4 @@
-### How would you evaluate these economies?
-
+# How would you evaluate these economies?
 Let's start with a simple test, in your opinion which economy had a better performance?
 
 - Evaluate each economy from 1 to 10
@@ -19,8 +18,7 @@ Even when presented with data from all years of a President's Term in a simple f
 - Although **cumulative** income growth was the **same** during Carter’s term (5.9% versus 5.9% in Clinton’s), participants rated the economy during Clinton’s first term as much stronger.
 
 
-### Real Election's Margin vs RDI Growth and Economy Evaluations
-
+## Election's Margin vs RDI Growth and Economy Evaluations
 Over a series of experiments, @HealyLenz_2014 reveal that participants tend to overweight the last year's performance, despite intending to weigh growth equally across all years. Results are shown in *Figure 2* below.
 
 - The graph to the left presents the Vote Margin for each election and the RDI Growth Rate, while the second one the Vote Margin and the Economic Evaluations by participants.
@@ -30,9 +28,7 @@ Over a series of experiments, @HealyLenz_2014 reveal that participants tend to o
   "schema-url": "assets/charts/margingrowtheval.json"
 }
 ```
-
-Why is this happening?
-
+## Why is this happening?
 - The end bias, a cognitive tendency to substitute the end for the whole, plays a significant role in voters' evaluations of economic performance. 
 
 - The concept of “Attribute Substitution”, illustrated by @Kahneman_2003 and @KahnemanFred_2002, reveals how individuals unconsciously replace a target attribute with a more readily accessible, related attribute when making judgments.
@@ -51,7 +47,7 @@ Why is this happening?
 
 
 
-## DRAFTS
+# DRAFTS
 ```vegalite
 {
   "schema-url": "assets/charts/carter7780.json"
@@ -64,7 +60,7 @@ Why is this happening?
 ```
 
 
-### Filter by President - RDI $US Values
+# Filter by President - RDI $US Values
 - Here we can see the performance for each presidential term.
 
 ```vegalite
@@ -73,7 +69,7 @@ Why is this happening?
 }
 ```
 
-### RDI $US Values
+# RDI $US Values
 - Here we can see the value in us dollars of the RDI for each presidential term.
 
 ```vegalite
@@ -94,7 +90,7 @@ Why is this happening?
 }
 ```
 
-### RDI %Growth Values
+# RDI %Growth Values
 - Here we can see the value in %Growth of the RDI for each presidential term.
 
 ```vegalite
@@ -112,7 +108,7 @@ Why is this happening?
 }
 ```
 
-### RDI Cumulative %Growth Values
+# RDI Cumulative %Growth Values
 - Here we can see the cumulative value in %Growth of the RDI for each presidential term.
 
 ```vegalite
