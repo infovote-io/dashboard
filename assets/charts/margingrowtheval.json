@@ -1,0 +1,52 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Figure 2",
+  "repeat": ["RDI_y", "economy"],
+  "columns": 2,
+  "spec": {
+    "data": {
+      "url": "assets/charts/data/df_vote.csv"
+    },
+    "layer": [
+      {
+        "mark": "point",
+        "width": 400,
+        "encoding": {
+          "x": {"field": {"repeat": "repeat"}, "type": "quantitative"},
+          "y": {"field": "inc_margin", "type": "quantitative"},
+          "color": {
+            "field": "year",
+            "type": "ordinal",
+            "legend": {"title": "Year"},
+            "scale": {"scheme": "category10"}
+          },
+          "size": {"value": 80},
+          "tooltip": [
+            {"field": "year", "type": "ordinal", "title": "Year"},
+            {"field": "inc_margin", "type": "quantitative", "title": "Inc Margin"},
+            {
+              "field": {"repeat": "repeat"},
+              "type": "quantitative",
+              "title": {"expr": "repeat === 'RDI_y' ? 'RDI_y' : 'Economy'"}
+            }
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "center",
+          "baseline": "bottom",
+          "fontSize": 10,
+          "dy": -10
+        },
+        "encoding": {
+          "x": {"field": {"repeat": "repeat"}, "type": "quantitative"},
+          "y": {"field": "inc_margin", "type": "quantitative"},
+          "text": {"field": "year", "type": "ordinal"}
+        }
+      }
+    ],
+    "title": {"text": {"repeat": "repeat"}}
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "RDI $US Values",
+  "data": {"url": "assets/charts/data/df_data.csv"},
+  "mark": {
+    "type": "line",
+    "point": true,
+    "tooltip": true
+  },
+  "transform": [
+    {"calculate": "year(datum.utcyymm)", "as": "year"}
+  ],
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {"field": "utcyymm", "type": "ordinal"},
+        "y": {"field": "usvalue", "aggregate": "mean", "type": "quantitative"},
+        "color": {"value": "blue"}, 
+        "axis": {"title": "usvalue"} 
+      }
+    },
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {"field": "utcyymm", "type": "ordinal"},
+        "y": {"field": "growthvalue", "type": "quantitative"},
+        "color": {"value": "orange"}, 
+        "axis": {"title": "growthvalue", "orient": "right"} 
+      }
+    }
+  ],
+  "resolve": {"scale": {"y": "independent"}} 
+}
