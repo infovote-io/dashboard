@@ -30,4 +30,6 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Publish Documentation
-        run: mkdocs gh-deploy
+        run: |
+          mkdocs build
+          mkdocs gh-deploy
