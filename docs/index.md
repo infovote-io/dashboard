@@ -19,7 +19,7 @@ Even when presented with data from all years of a President's Term in a simple f
 
 
 ## Election's Margin vs RDI Growth and Economy Evaluations
-Over a series of experiments, @HealyLenz_2014 reveal that participants tend to overweight the last year's performance, despite intending to weigh growth equally across all years. Results are shown in *Figure 2* below.
+Over a series of experiments, @HealyLenz_2014[^1] reveal that participants tend to overweight the last year's performance, despite intending to weigh growth equally across all years. Results are shown in *Figure 2* below.
 
 - The graph to the left presents the Vote Margin for each election and the RDI Growth Rate, while the second one the Vote Margin and the Economic Evaluations by participants.
 
@@ -31,88 +31,11 @@ Over a series of experiments, @HealyLenz_2014 reveal that participants tend to o
 ## Why is this happening?
 - The end bias, a cognitive tendency to substitute the end for the whole, plays a significant role in voters' evaluations of economic performance. 
 
-- The concept of “Attribute Substitution”, illustrated by @Kahneman_2003 and @KahnemanFred_2002, reveals how individuals unconsciously replace a target attribute with a more readily accessible, related attribute when making judgments.
+- The concept of “Attribute Substitution”, illustrated by [@Kahneman_2003](https://journals.sagepub.com/doi/10.1111/j.1467-9280.1993.tb00589.x) and @KahnemanFred_2002, reveals how individuals unconsciously replace a target attribute with a more readily accessible, related attribute when making judgments.
 
 - This phenomenon, exemplified in experiments by @KahnemanEtal_1993 involving immersion of hands in cold water, showcases people's inclination to remember experiences based on peak and end conditions, termed the "Peak-End Rule." 
 
 - This bias extends to diverse retrospective evaluations ranging from vacations to colonoscopies that underly the tendency to substitute overall assessments with easily accessible peak and end information (e.g., @Loewestein_1993; @Baumgarten_1997; @Ross_1991; @ZauDieAriely_2006).
 
 
-
-
-<div style="page-break-after: always;"></div>
-
-
-
-
-
-
-# DRAFTS
-```vegalite
-{
-  "schema-url": "assets/charts/carter7780.json"
-}
-```
-```vegalite
-{
-  "schema-url": "assets/charts/clinton9396.json"
-}
-```
-
-
-# Filter by President - RDI $US Values
-- Here we can see the performance for each presidential term.
-
-```vegalite
-{
-  "schema-url": "assets/charts/filter.json"
-}
-```
-
-# RDI $US Values
-- Here we can see the value in us dollars of the RDI for each presidential term.
-
-```vegalite
-{
-  "schema-url": "assets/charts/lines.json"
-}
-```
-
-```vegalite
-{
-  "schema-url": "assets/charts/filter_lines.json"
-}
-```
-
-```vegalite
-{
-  "schema-url": "assets/charts/selectionbug.json"
-}
-```
-
-# RDI %Growth Values
-- Here we can see the value in %Growth of the RDI for each presidential term.
-
-```vegalite
-{
-  "schema-url": "assets/charts/growth.json"
-}
-```
-
-  - - With Select
-  - Here we can see the value in %Growth of the RDI for each presidential term.
-
-```vegalite
-{
-  "schema-url": "assets/charts/selectgrowth.json"
-}
-```
-
-# RDI Cumulative %Growth Values
-- Here we can see the cumulative value in %Growth of the RDI for each presidential term.
-
-```vegalite
-{
-  "schema-url": "assets/charts/cumgrowth.json"
-}
-```
+[^1]: Teste Daniel

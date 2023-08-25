@@ -7,6 +7,7 @@ edit_uri: edit/main/docs/
 
 nav:
   - Home: index.md
+  - Draft: draft.md
 
 # Configuration
 theme:
