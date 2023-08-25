@@ -14,11 +14,13 @@ Even when presented with data from all years of a President's Term in a simple f
 
 - To illustrate this behavior, consider the two examples in *Figure 1*. In the left panel, which shows Bill Clinton’s first term, growth was only moderate on average, but ends on a relatively strong note. 
 
-- In the right panel, which shows Jimmy Carter’s only term, cumulative growth was actually the same as in Clinton’s first term, but it slows substantially by the election year. 
+- In the right panel, which shows Jimmy Carter’s only term, growth was stronger in the first two years, but it slows substantially by the election year. 
 
-- Even though cumulative income growth the **same** during Carter’s term (5.9% versus 5.9% in Clinton’s), participants rated the economy during Clinton’s first term as much stronger.
+- Although **cumulative** income growth was the **same** during Carter’s term (5.9% versus 5.9% in Clinton’s), participants rated the economy during Clinton’s first term as much stronger.
+
 
 ### Real Election's Margin vs RDI Growth and Economy Evaluations
+
 Over a series of experiments, @HealyLenz_2014 reveal that participants tend to overweight the last year's performance, despite intending to weigh growth equally across all years. Results are shown in *Figure 2* below.
 
 - The graph to the left presents the Vote Margin for each election and the RDI Growth Rate, while the second one the Vote Margin and the Economic Evaluations by participants.
@@ -29,7 +31,9 @@ Over a series of experiments, @HealyLenz_2014 reveal that participants tend to o
 }
 ```
 
-The end bias, a cognitive tendency to substitute the end for the whole, plays a significant role in voters' evaluations of economic performance. 
+Why is this happening?
+
+- The end bias, a cognitive tendency to substitute the end for the whole, plays a significant role in voters' evaluations of economic performance. 
 
 - The concept of “Attribute Substitution”, illustrated by @Kahneman_2003 and @KahnemanFred_2002, reveals how individuals unconsciously replace a target attribute with a more readily accessible, related attribute when making judgments.
 
@@ -47,7 +51,7 @@ The end bias, a cognitive tendency to substitute the end for the whole, plays a 
 
 
 
-### DRAFTS
+## DRAFTS
 ```vegalite
 {
   "schema-url": "assets/charts/carter7780.json"

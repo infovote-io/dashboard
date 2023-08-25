@@ -19,7 +19,11 @@
         },
         "y": {"field": "usvalue", "type": "quantitative"},
         "color": {"value": "blue"}, 
-        "axis": {"title": "usvalue"}  
+        "axis": {"title": "usvalue"},
+        "tooltip": [
+          {"field": "utcyymm", "type": "temporal", "title": "Year"},
+          {"field": "usvalue", "type": "quantitative", "title": "US Value"}
+        ]
       }
     },
     {
@@ -33,7 +37,11 @@
         },
         "y": {"field": "growthvalue", "type": "quantitative"},
         "color": {"value": "orange"}, 
-        "axis": {"title": "growthvalue", "orient": "right"} 
+        "axis": {"title": "growthvalue", "orient": "right"},
+        "tooltip": [
+          {"field": "utcyymm", "type": "temporal", "title": "Year"},
+          {"field": "growthvalue", "type": "quantitative", "title": "Growth Value"}
+        ]
       }
     }
   ],

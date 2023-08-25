@@ -1,43 +1,86 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {
-      "url": "assets/charts/data/df_data.csv",
-      "format": {"type": "csv"}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "assets/charts/data/df_data.csv",
+    "format": {"type": "csv"}
+  },
+  "title": {"text": "Figure 1"},
+  "hconcat": [
+    {
+      "width": 400, 
+      "transform": [
+        {"filter": "year(datum.utcyymm) >= 1993-1 && year(datum.utcyymm) <= 1996-1"}
+      ],
+      "layer": [
+        {
+          "mark": "line",
+          "encoding": {
+            "x": {
+              "type": "ordinal",
+              "axis": {"format": "%Y"},
+              "field": "utcyymm",
+              "timeUnit": "utcyearmonth"
+            },
+            "y": {"field": "growthvalue", "type": "quantitative"},
+            "tooltip": [
+              {"field": "growthvalue", "type": "quantitative", "title": "Growth Value"}
+            ]
+          }
+        },
+        {
+          "mark": "point",
+          "encoding": {
+            "x": {
+              "type": "ordinal",
+              "axis": {"format": "%Y"},
+              "field": "utcyymm",
+              "timeUnit": "utcyearmonth"
+            },
+            "y": {"field": "growthvalue", "type": "quantitative"},
+            "tooltip": [
+              {"field": "growthvalue", "type": "quantitative", "title": "Growth Value"}
+            ]
+          }
+        }
+      ]
     },
-    "title": {"text": "Figure 1"},
-    "hconcat": [
-      {
-        "width": 400, 
-        "transform": [
-          {"filter": "year(datum.utcyymm) >= 1993-1 && year(datum.utcyymm) <= 1996-1"}
-        ],
-        "mark": "line",
-        "encoding": {
-          "x": {
-            "type": "ordinal",
-            "axis": {"format": "%Y"},
-            "field": "utcyymm",
-            "timeUnit": "utcyearmonth"
-          },
-          "y": {"field": "growthvalue", "type": "quantitative"}
+    {
+      "width": 400, 
+      "transform": [
+        {"filter": "year(datum.utcyymm) >= 1977-1 && year(datum.utcyymm) <= 1980-1"}
+      ],
+      "layer": [
+        {
+          "mark": "line",
+          "encoding": {
+            "x": {
+              "type": "ordinal",
+              "axis": {"format": "%Y"},
+              "field": "utcyymm",
+              "timeUnit": "utcyearmonth"
+            },
+            "y": {"field": "growthvalue", "type": "quantitative"},
+            "tooltip": [
+              {"field": "growthvalue", "type": "quantitative", "title": "Growth Value"}
+            ]
+          }
+        },
+        {
+          "mark": "point",
+          "encoding": {
+            "x": {
+              "type": "ordinal",
+              "axis": {"format": "%Y"},
+              "field": "utcyymm",
+              "timeUnit": "utcyearmonth"
+            },
+            "y": {"field": "growthvalue", "type": "quantitative"},
+            "tooltip": [
+              {"field": "growthvalue", "type": "quantitative", "title": "Growth Value"}
+            ]
+          }
         }
-      },
-      {
-        "width": 400, 
-        "transform": [
-          {"filter": "year(datum.utcyymm) >= 1977-1 && year(datum.utcyymm) <= 1980-1"}
-        ],
-        "mark": "line",
-        "encoding": {
-          "x": {
-            "type": "ordinal",
-            "axis": {"format": "%Y"},
-            "field": "utcyymm",
-            "timeUnit": "utcyearmonth"
-          },
-          "y": {"field": "growthvalue", "type": "quantitative"}
-        }
-      }
-    ]
-  }
-  
+      ]
+    }
+  ]
+}

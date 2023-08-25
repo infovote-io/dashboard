@@ -7,38 +7,46 @@
     "data": {
       "url": "assets/charts/data/df_vote.csv"
     },
-    "mark": "point",
-    "width": 400,
-    "encoding": {
-      "x": {"field": {"repeat": "repeat"}, "type": "quantitative"},
-      "y": {"field": "inc_margin", "type": "quantitative"},
-      "color": {
-        "field": "year",
-        "type": "temporal",
-        "timeUnit": "utcyear",
-        "legend": null,
-        "scale": {"scheme": "category10"}
-      },
-      "size": {"value": 80},
-      "text": {
-        "field": "year",
-        "type": "temporal",
-        "timeUnit": "utcyear",
-        "format": "%Y"
-      },
-      "fontSize": {"value": 10},
-      "align": {"value": "center"},
-      "baseline": {"value": "bottom"},
-      "tooltip": [
-        {"field": "year", "type": "temporal", "timeUnit": "utcyear", "title": "Year"},
-        {"field": "inc_margin", "type": "quantitative", "title": "Inc Margin"},
-        {
-          "field": {"repeat": "repeat"},
-          "type": "quantitative",
-          "title": {"expr": "repeat === 'RDI_y' ? 'RDI_y' : 'Economy'"}
+    "layer": [
+      {
+        "mark": "point",
+        "width": 400,
+        "encoding": {
+          "x": {"field": {"repeat": "repeat"}, "type": "quantitative"},
+          "y": {"field": "inc_margin", "type": "quantitative"},
+          "color": {
+            "field": "year",
+            "type": "ordinal",
+            "legend": {"title": "Year"},
+            "scale": {"scheme": "category10"}
+          },
+          "size": {"value": 80},
+          "tooltip": [
+            {"field": "year", "type": "ordinal", "title": "Year"},
+            {"field": "inc_margin", "type": "quantitative", "title": "Inc Margin"},
+            {
+              "field": {"repeat": "repeat"},
+              "type": "quantitative",
+              "title": {"expr": "repeat === 'RDI_y' ? 'RDI_y' : 'Economy'"}
+            }
+          ]
         }
-      ]
-    },
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "center",
+          "baseline": "bottom",
+          "fontSize": 10,
+          "dy": -10
+        },
+        "encoding": {
+          "x": {"field": {"repeat": "repeat"}, "type": "quantitative"},
+          "y": {"field": "inc_margin", "type": "quantitative"},
+          "text": {"field": "year", "type": "ordinal"}
+        }
+      }
+    ],
     "title": {"text": {"repeat": "repeat"}}
   }
 }
