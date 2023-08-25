@@ -37,5 +37,4 @@ Over a series of experiments, @HealyLenz_2014[^1] reveal that participants tend 
 
 - This bias extends to diverse retrospective evaluations ranging from vacations to colonoscopies that underly the tendency to substitute overall assessments with easily accessible peak and end information (e.g., @Loewestein_1993; @Baumgarten_1997; @Ross_1991; @ZauDieAriely_2006).
 
-
 [^1]: Teste Daniel
