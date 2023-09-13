@@ -68,3 +68,11 @@
 }
 ```
 
+
+```vegalite
+{
+  "schema-url": "assets/charts/rank.json"
+}
+```
+
+

@@ -1,0 +1,32 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Ranking of Presidents by Cumulative %Growth",
+    "data": {"url": "assets/charts/data/df_data.csv"},
+    "transform": [
+        {"calculate": "year(datum.utcyymm)", "as": "year"},
+        {"calculate": "month(datum.utcyymm)", "as": "month"},
+        {"calculate": "quarter(datum.utcyymm)", "as": "quarter"},
+        {"window": [{"op": "sum", "field": "growthvalue", "as": "cumgrowth"}], "groupby": ["presidents", "year"], "sort": [{"field": "utcyymm"}]},
+        {"window": [{"op": "sum", "field": "cumgrowth", "as": "four_year_cumgrowth"}], "groupby": ["presidents"], "frame": [-3, 0]}
+    ],
+    "mark": "bar",
+    "encoding": {
+        "x": {"field": "cumgrowth", "type": "quantitative", "title": "Cumulative Growth"},
+        "y": {
+            "field": "presidents",
+            "type": "nominal",
+            "title": "President",
+            "sort": {"op": "sum", "field": "four_year_cumgrowth", "order": "descending"}
+        },
+        "color": {
+            "field": "four_year_cumgrowth",
+            "type": "quantitative",
+            "title": "Four-Year Cumulative Growth",
+            "scale": {"scheme": "viridis"}
+        },
+        "tooltip": [
+            {"field": "presidents", "type": "nominal", "title": "President"},
+            {"field": "cumgrowth", "type": "quantitative", "title": "Cumulative Growth"}
+        ]
+    }
+}
