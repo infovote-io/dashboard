@@ -7,7 +7,7 @@
   "title": {"text": "Figure 1"},
   "hconcat": [
     {
-      "width": 400, 
+      "width": 400,
       "transform": [
         {"filter": "year(datum.utcyymm) >= 1993-1 && year(datum.utcyymm) <= 1996-1"}
       ],
@@ -17,11 +17,15 @@
           "encoding": {
             "x": {
               "type": "ordinal",
-              "axis": {"format": "%Y"},
+              "axis": {"format": "%Y", "title": "Year"}, 
               "field": "utcyymm",
               "timeUnit": "utcyearmonth"
             },
-            "y": {"field": "growthvalue", "type": "quantitative"},
+            "y": {
+              "field": "growthvalue",
+              "type": "quantitative",
+              "axis": {"title": "% Change in Personal Income"} 
+            },
             "tooltip": [
               {"field": "growthvalue", "type": "quantitative", "title": "Growth Value"}
             ]
@@ -36,7 +40,11 @@
               "field": "utcyymm",
               "timeUnit": "utcyearmonth"
             },
-            "y": {"field": "growthvalue", "type": "quantitative"},
+            "y": {
+              "field": "growthvalue",
+              "type": "quantitative",
+              "axis": {"title": "% Change in Personal Income"} 
+            },
             "tooltip": [
               {"field": "growthvalue", "type": "quantitative", "title": "Growth Value"}
             ]
@@ -45,7 +53,7 @@
       ]
     },
     {
-      "width": 400, 
+      "width": 400,
       "transform": [
         {"filter": "year(datum.utcyymm) >= 1977-1 && year(datum.utcyymm) <= 1980-1"}
       ],
@@ -55,11 +63,15 @@
           "encoding": {
             "x": {
               "type": "ordinal",
-              "axis": {"format": "%Y"},
+              "axis": {"format": "%Y", "title": "Year"}, 
               "field": "utcyymm",
               "timeUnit": "utcyearmonth"
             },
-            "y": {"field": "growthvalue", "type": "quantitative"},
+            "y": {
+              "field": "growthvalue",
+              "type": "quantitative",
+              "axis": {"title": "% Change in Personal Income"} 
+            },
             "tooltip": [
               {"field": "growthvalue", "type": "quantitative", "title": "Growth Value"}
             ]
@@ -74,7 +86,11 @@
               "field": "utcyymm",
               "timeUnit": "utcyearmonth"
             },
-            "y": {"field": "growthvalue", "type": "quantitative"},
+            "y": {
+              "field": "growthvalue",
+              "type": "quantitative",
+              "axis": {"title": "% Change in Personal Income"} 
+            },
             "tooltip": [
               {"field": "growthvalue", "type": "quantitative", "title": "Growth Value"}
             ]
