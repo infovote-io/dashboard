@@ -9,7 +9,6 @@
         {"window": [{"op": "sum", "field": "growthvalue", "as": "cumgrowth"}], "groupby": ["presidents", "year"], "sort": [{"field": "utcyymm"}]},
         {"window": [{"op": "sum", "field": "cumgrowth", "as": "four_year_cumgrowth"}], "groupby": ["presidents"], "frame": [-3, 0]}
     ],
-    "mark": "bar",
     "encoding": {
         "x": {"field": "cumgrowth", "type": "quantitative", "title": "Cumulative Growth"},
         "y": {
@@ -26,7 +25,24 @@
         },
         "tooltip": [
             {"field": "presidents", "type": "nominal", "title": "President"},
-            {"field": "cumgrowth", "type": "quantitative", "title": "Cumulative Growth"}
+            {"field": "cumgrowth", "type": "quantitative", "title": "Cumulative Growth"},
+            {"field": "four_year_cumgrowth", "type": "quantitative", "title": "Four-Year Cumulative Growth"}
         ]
-    }
+    },
+    "layer": [
+        {
+            "mark": "bar"
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "middle",
+                "dx": 5
+            },
+            "encoding": {
+                "text": {"field": "four_year_cumgrowth", "type": "quantitative", "format": ".2f"}
+            }
+        }
+    ]
 }
