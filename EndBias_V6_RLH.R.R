@@ -19,8 +19,47 @@ data <- fromJSON(content(GET(url), "text"))
 odata <- read.csv("https://www.dropbox.com/s/r5qsxerj04jgu7y/RDI_40_09.csv?dl=1")
 
 # Dict of Presidents
-presidents <- jsonlite::fromJSON('{"1960": "Dwight D. Eisenhower", "1964": "Lyndon B. Johnson - 1st term", "1968": "Lyndon B. Johnson - 2nd term", "1972": "Richard Nixon", "1976": "Gerald Ford", "1980": "Jimmy Carter", "1984": "Ronald Reagan - 1st term", "1988": "Ronald Reagan - 2nd term", "1992": "George H.W. Bush", "1996": "Bill Clinton - 1st term", "2000": "Bill Clinton - 2nd term", "2004": "George W. Bush - 1st term", "2008": "George W. Bush - 2nd term", "2012": "Barack Obama - 1st term", "2016": "Barack Obama - 2nd term", "2020": "Donald Trump", "2024": "Joe Biden"}')
-presidents_o <- jsonlite::fromJSON('{"1940": "Franklin D. Roosevelt - 3rd term", "1944": "Franklin D. Roosevelt - 4th term", "1945": "Harry S. Truman - 1st term", "1948": "Harry S. Truman - 2nd term", "1952": "Dwight D. Eisenhower - 1st term", "1956": "Dwight D. Eisenhower - 2nd term", "1960": "John F. Kennedy", "1964": "Lyndon B. Johnson - 1st term", "1968": "Lyndon B. Johnson - 2nd term", "1972": "Richard Nixon", "1976": "Gerald Ford", "1980": "Jimmy Carter", "1984": "Ronald Reagan - 1st term", "1988": "Ronald Reagan - 2nd term", "1992": "George H.W. Bush", "1996": "Bill Clinton - 1st term", "2000": "Bill Clinton - 2nd term", "2004": "George W. Bush - 1st term", "2008": "George W. Bush - 2nd term", "2012": "Barack Obama - 1st term"}')
+# Dict of Presidents with only the last year of each term
+presidents <- jsonlite::fromJSON('{
+  "1964": "John F. Kennedy",
+  "1968": "Lyndon B. Johnson",
+  "1972": "Richard Nixon - 1st term",
+  "1976": "Richard Nixon - 2nd term / 1974-1976: Gerald Ford",
+  "1980": "Jimmy Carter",
+  "1984": "Ronald Reagan - 1st term",
+  "1988": "Ronald Reagan - 2nd term",
+  "1992": "George H.W. Bush",
+  "1996": "Bill Clinton - 1st term",
+  "2000": "Bill Clinton - 2nd term",
+  "2004": "George W. Bush - 1st term",
+  "2008": "George W. Bush - 2nd term",
+  "2012": "Barack Obama - 1st term",
+  "2016": "Barack Obama - 2nd term",
+  "2020": "Donald Trump",
+  "2024": "Joe Biden"
+}')
+
+# Dict of Presidents_o with only the last year of each term
+presidents_o <- jsonlite::fromJSON('{
+  "1944": "Franklin D. Roosevelt - 3rd term",
+  "1948": "Franklin D. Roosevelt - 4th term",
+  "1952": "Harry S. Truman",
+  "1956": "Dwight D. Eisenhower - 1st term",
+  "1960": "Dwight D. Eisenhower - 2nd term",
+  "1964": "John F. Kennedy",
+  "1968": "Lyndon B. Johnson",
+  "1972": "Richard Nixon - 1st term",
+  "1976": "Richard Nixon - 2nd term / 1974-1976: Gerald Ford",
+  "1980": "Jimmy Carter",
+  "1984": "Ronald Reagan - 1st term",
+  "1988": "Ronald Reagan - 2nd term",
+  "1992": "George H.W. Bush",
+  "1996": "Bill Clinton - 1st term",
+  "2000": "Bill Clinton - 2nd term",
+  "2004": "George W. Bush - 1st term",
+  "2008": "George W. Bush - 2nd term",
+  "2012": "Barack Obama - 1st term"
+}')
 
 # Original Data
 df_o <- odata %>%
