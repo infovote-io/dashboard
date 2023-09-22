@@ -33,21 +33,13 @@ Over a series of experiments, Healy and Lenz[^1] reveal that participants tend t
 
 - Retrospective voting involves citizens assessing the past economic performance of incumbents when making electoral decisions.
 
-<<<<<<< HEAD
 - The concept of “Attribute Substitution”, illustrated by Kahneman[^2] and Kahneman & Frederick[^3], reveals how individuals unconsciously replace a target attribute with a more readily accessible, related attribute when making judgments.
-=======
-- This phenomenon, exemplified in experiments by @KahnemanEtal_1993 involving immersion of hands in cold water, showcases people's inclination to remember experiences based on peak and end conditions, termed the "Peak-End Rule."
->>>>>>> 65e229f236558dacc81966dd1b9cecd6c15f67e7
 
 - This phenomenon, exemplified in experiments by Kahneman, Fredrickson, Schreiber[^4] involving immersion of hands in cold water, showcases people's inclination to remember experiences based on peak and end conditions, termed the "Peak-End Rule." 
 
-<<<<<<< HEAD
 - This bias extends to diverse retrospective evaluations ranging from vacations to colonoscopies that underly the tendency to substitute overall assessments with easily accessible peak and end information. The video by [Wireless Philosophy](https://www.youtube.com/watch?v=RhyJGwNpEcw) does a great job explaining this phenomenae.
 
 [^1]: Substituting the End for the Whole https://onlinelibrary.wiley.com/doi/10.1111/ajps.12053
 [^2]: Maps of Bounded Rationality https://pubs.aeaweb.org/doi/10.1257/000282803322655392
 [^3]: Spontaneous vs Deliberate Thinking https://www.cambridge.org/core/product/identifier/CBO9780511808098A012/type/book_part
 [^4]: Cold Water Experiment http://journals.sagepub.com/doi/10.1111/j.1467-9280.1993.tb00589.x
-=======
-[^1]: Teste Daniel
->>>>>>> 65e229f236558dacc81966dd1b9cecd6c15f67e7
