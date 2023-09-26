@@ -25,7 +25,19 @@ Over a series of experiments, Healy and Lenz[^1] reveal that participants tend t
 
 ```vegalite
 {
-  "schema-url": "assets/charts/margingrowtheval.json"
+  "schema-url": "assets/charts/margingrowtheval_hcon.json"
+}
+```
+
+```vegalite
+{
+  "schema-url": "assets/charts/margingrowtheval_rep.json"
+}
+```
+
+```vegalite
+{
+  "schema-url": "assets/charts/margingrowtheval_sep.json"
 }
 ```
 ## Why is this happening?
