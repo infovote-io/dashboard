@@ -1,6 +1,7 @@
 # How would you evaluate these economies?
 Let's start with a simple test, in your opinion which economy had a better performance?
 
+
 - Evaluate each economy from 1 to 10
 
 ```vegalite
@@ -47,7 +48,7 @@ Over a series of experiments, Healy and Lenz[^1] reveal that participants tend t
 
 - The concept of “Attribute Substitution”, illustrated by Kahneman[^2] and Kahneman & Frederick[^3], reveals how individuals unconsciously replace a target attribute with a more readily accessible, related attribute when making judgments.
 
-- This phenomenon, exemplified in experiments by Kahneman, Fredrickson, Schreiber[^4] involving immersion of hands in cold water, showcases people's inclination to remember experiences based on peak and end conditions, termed the "Peak-End Rule." 
+- This phenomenon, exemplified in experiments by Kahneman, Fredrickson, Schreiber[^4] involving immersion of hands in cold water, showcases people's inclination to remember experiences based on peak and end conditions, termed the "Peak-End Rule."
 
 - This bias extends to diverse retrospective evaluations ranging from vacations to colonoscopies that underly the tendency to substitute overall assessments with easily accessible peak and end information. The video by [Wireless Philosophy](https://www.youtube.com/watch?v=RhyJGwNpEcw) does a great job explaining this phenomenae.
 
