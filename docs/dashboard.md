@@ -36,7 +36,13 @@ hide:
       ```
     </td>
     <td>
-      <img src="https://www.dropbox.com/scl/fi/f8eycrhxr2kybnja1lq9u/marginmap.png?rlkey=kegy1d5r6v74b3ghuho3uqjrn&dl=1" alt="Margin Map" width="600" height="400">
+      ```vegalite
+      {
+        "width": 200,
+        "height": 200,
+        "schema-url": "assets/charts/mapv1.json"
+      }
+      ```
     </td>
   </tr>
 </table>
