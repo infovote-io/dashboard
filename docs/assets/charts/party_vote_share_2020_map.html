@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8afeb174ec69f62bf50dd5c2ad75ec87 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8afeb174ec69f62bf50dd5c2ad75ec87" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8afeb174ec69f62bf50dd5c2ad75ec87 = L.map(
+                "map_8afeb174ec69f62bf50dd5c2ad75ec87",
+                {
+                    center: [37.0902, -95.7129],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5f868efcba6832d5efaa90af4371d69e = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            var circle_marker_24ec827256ffdaba5f8c0f2af3c2e9d2 = L.circleMarker(
+                [61.370716, -152.404419],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_24ec827256ffdaba5f8c0f2af3c2e9d2.bindTooltip(
+                `<div>
+                     <strong>State:</strong> AK<br><strong>DEMOCRAT Share:</strong> 21.39%<br><strong>REPUBLICAN Share:</strong> 26.42%<br><strong>Total Votes:</strong> 719,060.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_acdca75bdf3b9ea0baa1957e80256f3a = L.circleMarker(
+                [32.806671, -86.79113],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_acdca75bdf3b9ea0baa1957e80256f3a.bindTooltip(
+                `<div>
+                     <strong>State:</strong> AL<br><strong>DEMOCRAT Share:</strong> 18.28%<br><strong>REPUBLICAN Share:</strong> 31.02%<br><strong>Total Votes:</strong> 4,646,564.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7b31a0ce1dfac5802d6dffb25d3b2189 = L.circleMarker(
+                [34.969704, -92.373123],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_7b31a0ce1dfac5802d6dffb25d3b2189.bindTooltip(
+                `<div>
+                     <strong>State:</strong> AR<br><strong>DEMOCRAT Share:</strong> 17.39%<br><strong>REPUBLICAN Share:</strong> 31.20%<br><strong>Total Votes:</strong> 2,438,138.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_874e9c69eb1e6797f2e649f2861bb2c2 = L.circleMarker(
+                [33.729759, -111.431221],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_874e9c69eb1e6797f2e649f2861bb2c2.bindTooltip(
+                `<div>
+                     <strong>State:</strong> AZ<br><strong>DEMOCRAT Share:</strong> 24.68%<br><strong>REPUBLICAN Share:</strong> 24.53%<br><strong>Total Votes:</strong> 6,774,652.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_621be22426fc534d77abffdcc1b47ea9 = L.circleMarker(
+                [36.116203, -119.681564],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_621be22426fc534d77abffdcc1b47ea9.bindTooltip(
+                `<div>
+                     <strong>State:</strong> CA<br><strong>DEMOCRAT Share:</strong> 31.74%<br><strong>REPUBLICAN Share:</strong> 17.16%<br><strong>Total Votes:</strong> 35,001,762.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1919dc42a82b3a7b40797d009d523121 = L.circleMarker(
+                [39.059811, -105.311104],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_1919dc42a82b3a7b40797d009d523121.bindTooltip(
+                `<div>
+                     <strong>State:</strong> CO<br><strong>DEMOCRAT Share:</strong> 27.51%<br><strong>REPUBLICAN Share:</strong> 20.80%<br><strong>Total Votes:</strong> 6,559,960.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_843f9e0ff3a1e2172984490a6e0fc244 = L.circleMarker(
+                [41.597782, -72.755371],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_843f9e0ff3a1e2172984490a6e0fc244.bindTooltip(
+                `<div>
+                     <strong>State:</strong> CT<br><strong>DEMOCRAT Share:</strong> 29.63%<br><strong>REPUBLICAN Share:</strong> 19.59%<br><strong>Total Votes:</strong> 3,647,714.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6bc50d073c60f05efd11e429911d8873 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_6bc50d073c60f05efd11e429911d8873.bindTooltip(
+                `<div>
+                     <strong>State:</strong> DC<br><strong>DEMOCRAT Share:</strong> 46.07%<br><strong>REPUBLICAN Share:</strong> 2.70%<br><strong>Total Votes:</strong> 688,712.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_92294c02d9befa1df3f0f36cff2afbe6 = L.circleMarker(
+                [39.318523, -75.507141],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_92294c02d9befa1df3f0f36cff2afbe6.bindTooltip(
+                `<div>
+                     <strong>State:</strong> DE<br><strong>DEMOCRAT Share:</strong> 29.37%<br><strong>REPUBLICAN Share:</strong> 19.89%<br><strong>Total Votes:</strong> 1,008,692.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7fe3df59c0c09f13056efd62a7c90651 = L.circleMarker(
+                [27.766279, -81.686783],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_7fe3df59c0c09f13056efd62a7c90651.bindTooltip(
+                `<div>
+                     <strong>State:</strong> FL<br><strong>DEMOCRAT Share:</strong> 23.93%<br><strong>REPUBLICAN Share:</strong> 25.61%<br><strong>Total Votes:</strong> 22,134,912.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ab57f9f73c20ddef70ab77ad89917d14 = L.circleMarker(
+                [33.040619, -83.643074],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_ab57f9f73c20ddef70ab77ad89917d14.bindTooltip(
+                `<div>
+                     <strong>State:</strong> GA<br><strong>DEMOCRAT Share:</strong> 24.74%<br><strong>REPUBLICAN Share:</strong> 24.62%<br><strong>Total Votes:</strong> 9,999,920.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6aab2e7cd3145d9c704042b0d817cec9 = L.circleMarker(
+                [21.094318, -157.498337],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_6aab2e7cd3145d9c704042b0d817cec9.bindTooltip(
+                `<div>
+                     <strong>State:</strong> HI<br><strong>DEMOCRAT Share:</strong> 31.57%<br><strong>REPUBLICAN Share:</strong> 16.98%<br><strong>Total Votes:</strong> 1,159,568.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_72d4140c1b50d8aa443b057b141945e3 = L.circleMarker(
+                [42.011539, -93.210526],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_72d4140c1b50d8aa443b057b141945e3.bindTooltip(
+                `<div>
+                     <strong>State:</strong> IA<br><strong>DEMOCRAT Share:</strong> 22.32%<br><strong>REPUBLICAN Share:</strong> 26.40%<br><strong>Total Votes:</strong> 3,400,260.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e2827ee370396c90f0ba406cf158cf3a = L.circleMarker(
+                [44.240459, -114.478828],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_e2827ee370396c90f0ba406cf158cf3a.bindTooltip(
+                `<div>
+                     <strong>State:</strong> ID<br><strong>DEMOCRAT Share:</strong> 16.53%<br><strong>REPUBLICAN Share:</strong> 31.92%<br><strong>Total Votes:</strong> 1,736,028.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1bc2d4845bab1091e0663e6e6caa5e3f = L.circleMarker(
+                [40.349457, -88.986137],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_1bc2d4845bab1091e0663e6e6caa5e3f.bindTooltip(
+                `<div>
+                     <strong>State:</strong> IL<br><strong>DEMOCRAT Share:</strong> 28.77%<br><strong>REPUBLICAN Share:</strong> 20.28%<br><strong>Total Votes:</strong> 12,067,486.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6a2c0ace3d7a0041de38217258e7b577 = L.circleMarker(
+                [39.849426, -86.258278],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_6a2c0ace3d7a0041de38217258e7b577.bindTooltip(
+                `<div>
+                     <strong>State:</strong> IN<br><strong>DEMOCRAT Share:</strong> 20.48%<br><strong>REPUBLICAN Share:</strong> 28.51%<br><strong>Total Votes:</strong> 6,066,236.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_aab6d28b75d0b637dff5e48d41c416f9 = L.circleMarker(
+                [38.5266, -96.726486],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_aab6d28b75d0b637dff5e48d41c416f9.bindTooltip(
+                `<div>
+                     <strong>State:</strong> KS<br><strong>DEMOCRAT Share:</strong> 20.78%<br><strong>REPUBLICAN Share:</strong> 28.11%<br><strong>Total Votes:</strong> 2,744,606.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cb7e753a83a312c41ce41415dc11088f = L.circleMarker(
+                [37.66814, -84.670067],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_cb7e753a83a312c41ce41415dc11088f.bindTooltip(
+                `<div>
+                     <strong>State:</strong> KY<br><strong>DEMOCRAT Share:</strong> 18.08%<br><strong>REPUBLICAN Share:</strong> 31.04%<br><strong>Total Votes:</strong> 4,273,536.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8aa8c56f3a83b36dec5c89ded29f006d = L.circleMarker(
+                [31.169546, -91.867805],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_8aa8c56f3a83b36dec5c89ded29f006d.bindTooltip(
+                `<div>
+                     <strong>State:</strong> LA<br><strong>DEMOCRAT Share:</strong> 19.93%<br><strong>REPUBLICAN Share:</strong> 29.23%<br><strong>Total Votes:</strong> 4,296,124.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_63e7f2b28f926fe3f508fbe8afc84be5 = L.circleMarker(
+                [42.230171, -71.530106],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_63e7f2b28f926fe3f508fbe8afc84be5.bindTooltip(
+                `<div>
+                     <strong>State:</strong> MA<br><strong>DEMOCRAT Share:</strong> 32.56%<br><strong>REPUBLICAN Share:</strong> 15.95%<br><strong>Total Votes:</strong> 7,316,010.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6ff2c78121a3bad3bb06933803960687 = L.circleMarker(
+                [39.063946, -76.802101],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_6ff2c78121a3bad3bb06933803960687.bindTooltip(
+                `<div>
+                     <strong>State:</strong> MD<br><strong>DEMOCRAT Share:</strong> 32.68%<br><strong>REPUBLICAN Share:</strong> 16.08%<br><strong>Total Votes:</strong> 6,074,060.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_88e18e9df294290b5c98a41913158dc2 = L.circleMarker(
+                [44.693947, -69.381927],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_88e18e9df294290b5c98a41913158dc2.bindTooltip(
+                `<div>
+                     <strong>State:</strong> ME<br><strong>DEMOCRAT Share:</strong> 26.26%<br><strong>REPUBLICAN Share:</strong> 21.78%<br><strong>Total Votes:</strong> 1,656,610.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4d7565e5c4fc3db09f3ce07a8f9f6eba = L.circleMarker(
+                [43.326618, -84.536095],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_4d7565e5c4fc3db09f3ce07a8f9f6eba.bindTooltip(
+                `<div>
+                     <strong>State:</strong> MI<br><strong>DEMOCRAT Share:</strong> 25.31%<br><strong>REPUBLICAN Share:</strong> 23.92%<br><strong>Total Votes:</strong> 11,078,604.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b13ab9e5cac280af06c53523516fcbfb = L.circleMarker(
+                [45.694454, -93.900192],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_b13ab9e5cac280af06c53523516fcbfb.bindTooltip(
+                `<div>
+                     <strong>State:</strong> MN<br><strong>DEMOCRAT Share:</strong> 26.20%<br><strong>REPUBLICAN Share:</strong> 22.64%<br><strong>Total Votes:</strong> 6,554,342.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_781c5553a7c0ff9f4d3bbbb2099d0704 = L.circleMarker(
+                [38.456085, -92.288368],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_781c5553a7c0ff9f4d3bbbb2099d0704.bindTooltip(
+                `<div>
+                     <strong>State:</strong> MO<br><strong>DEMOCRAT Share:</strong> 20.70%<br><strong>REPUBLICAN Share:</strong> 28.40%<br><strong>Total Votes:</strong> 6,051,924.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c947d36e025e668075a942d5435cef77 = L.circleMarker(
+                [32.741646, -89.678696],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_c947d36e025e668075a942d5435cef77.bindTooltip(
+                `<div>
+                     <strong>State:</strong> MS<br><strong>DEMOCRAT Share:</strong> 20.53%<br><strong>REPUBLICAN Share:</strong> 28.80%<br><strong>Total Votes:</strong> 2,627,518.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f260d55c7145ae1cce65c77773978c59 = L.circleMarker(
+                [46.921925, -110.454353],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_f260d55c7145ae1cce65c77773978c59.bindTooltip(
+                `<div>
+                     <strong>State:</strong> MT<br><strong>DEMOCRAT Share:</strong> 20.27%<br><strong>REPUBLICAN Share:</strong> 28.46%<br><strong>Total Votes:</strong> 1,207,348.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1cefbf9d02a0574771ab191b6532b5b2 = L.circleMarker(
+                [35.630066, -79.806419],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_1cefbf9d02a0574771ab191b6532b5b2.bindTooltip(
+                `<div>
+                     <strong>State:</strong> NC<br><strong>DEMOCRAT Share:</strong> 24.29%<br><strong>REPUBLICAN Share:</strong> 24.97%<br><strong>Total Votes:</strong> 11,049,604.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1f4f7051b517658971d449b3c8b14c84 = L.circleMarker(
+                [47.528912, -99.784012],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_1f4f7051b517658971d449b3c8b14c84.bindTooltip(
+                `<div>
+                     <strong>State:</strong> ND<br><strong>DEMOCRAT Share:</strong> 15.88%<br><strong>REPUBLICAN Share:</strong> 32.56%<br><strong>Total Votes:</strong> 723,638.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bee352d2f78bd56d3a56a789faf9ee47 = L.circleMarker(
+                [41.12537, -98.268082],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_bee352d2f78bd56d3a56a789faf9ee47.bindTooltip(
+                `<div>
+                     <strong>State:</strong> NE<br><strong>DEMOCRAT Share:</strong> 19.58%<br><strong>REPUBLICAN Share:</strong> 29.11%<br><strong>Total Votes:</strong> 1,912,766.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_843825cf0b97b198ef6f55c360bf937e = L.circleMarker(
+                [43.452492, -71.563896],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_843825cf0b97b198ef6f55c360bf937e.bindTooltip(
+                `<div>
+                     <strong>State:</strong> NH<br><strong>DEMOCRAT Share:</strong> 26.35%<br><strong>REPUBLICAN Share:</strong> 22.68%<br><strong>Total Votes:</strong> 1,612,364.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2edc0e84191c2f133cb17b694f362da4 = L.circleMarker(
+                [40.298904, -74.521011],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_2edc0e84191c2f133cb17b694f362da4.bindTooltip(
+                `<div>
+                     <strong>State:</strong> NJ<br><strong>DEMOCRAT Share:</strong> 28.67%<br><strong>REPUBLICAN Share:</strong> 20.70%<br><strong>Total Votes:</strong> 9,098,706.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_da4e8e121445f7efecbaa57e573a0a1f = L.circleMarker(
+                [34.840515, -106.248482],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_da4e8e121445f7efecbaa57e573a0a1f.bindTooltip(
+                `<div>
+                     <strong>State:</strong> NM<br><strong>DEMOCRAT Share:</strong> 27.14%<br><strong>REPUBLICAN Share:</strong> 21.75%<br><strong>Total Votes:</strong> 1,847,930.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8a687e70ac811e4c082880ad5f4548bd = L.circleMarker(
+                [38.313515, -117.055374],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_8a687e70ac811e4c082880ad5f4548bd.bindTooltip(
+                `<div>
+                     <strong>State:</strong> NV<br><strong>DEMOCRAT Share:</strong> 25.03%<br><strong>REPUBLICAN Share:</strong> 23.83%<br><strong>Total Votes:</strong> 2,810,752.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_db89ba7683ae315a27428e620bb66220 = L.circleMarker(
+                [42.165726, -74.948051],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_db89ba7683ae315a27428e620bb66220.bindTooltip(
+                `<div>
+                     <strong>State:</strong> NY<br><strong>DEMOCRAT Share:</strong> 30.20%<br><strong>REPUBLICAN Share:</strong> 18.73%<br><strong>Total Votes:</strong> 17,323,470.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_127c57f49035592b9c1b34c52d09dd50 = L.circleMarker(
+                [40.388783, -82.764915],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_127c57f49035592b9c1b34c52d09dd50.bindTooltip(
+                `<div>
+                     <strong>State:</strong> OH<br><strong>DEMOCRAT Share:</strong> 22.62%<br><strong>REPUBLICAN Share:</strong> 26.64%<br><strong>Total Votes:</strong> 11,844,404.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_29467e0f71c1981fcf865197ff7afea9 = L.circleMarker(
+                [35.565342, -96.928917],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_29467e0f71c1981fcf865197ff7afea9.bindTooltip(
+                `<div>
+                     <strong>State:</strong> OK<br><strong>DEMOCRAT Share:</strong> 16.14%<br><strong>REPUBLICAN Share:</strong> 32.69%<br><strong>Total Votes:</strong> 3,121,398.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_54e7a1010bec3f63bccfc52915bc6e8c = L.circleMarker(
+                [44.572021, -122.070938],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_54e7a1010bec3f63bccfc52915bc6e8c.bindTooltip(
+                `<div>
+                     <strong>State:</strong> OR<br><strong>DEMOCRAT Share:</strong> 28.23%<br><strong>REPUBLICAN Share:</strong> 20.18%<br><strong>Total Votes:</strong> 4,748,642.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0689cb67ea6668cb371f7f66ee27b985 = L.circleMarker(
+                [40.590752, -77.209755],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_0689cb67ea6668cb371f7f66ee27b985.bindTooltip(
+                `<div>
+                     <strong>State:</strong> PA<br><strong>DEMOCRAT Share:</strong> 25.00%<br><strong>REPUBLICAN Share:</strong> 24.42%<br><strong>Total Votes:</strong> 13,830,566.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_323530189d2ae7ab22a5803b10f8c38b = L.circleMarker(
+                [41.680893, -71.51178],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_323530189d2ae7ab22a5803b10f8c38b.bindTooltip(
+                `<div>
+                     <strong>State:</strong> RI<br><strong>DEMOCRAT Share:</strong> 29.74%<br><strong>REPUBLICAN Share:</strong> 19.34%<br><strong>Total Votes:</strong> 1,033,980.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9a58bed21ec2caf046cb7ab1c99a381e = L.circleMarker(
+                [33.856892, -80.945007],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_9a58bed21ec2caf046cb7ab1c99a381e.bindTooltip(
+                `<div>
+                     <strong>State:</strong> SC<br><strong>DEMOCRAT Share:</strong> 21.71%<br><strong>REPUBLICAN Share:</strong> 27.55%<br><strong>Total Votes:</strong> 5,028,192.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_56ee77035a7d9d7fdbfcfe06dd75636d = L.circleMarker(
+                [44.299782, -99.438828],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_56ee77035a7d9d7fdbfcfe06dd75636d.bindTooltip(
+                `<div>
+                     <strong>State:</strong> SD<br><strong>DEMOCRAT Share:</strong> 17.80%<br><strong>REPUBLICAN Share:</strong> 30.88%<br><strong>Total Votes:</strong> 845,218.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6b77d4da461afef785c34362f64e77b8 = L.circleMarker(
+                [35.747845, -86.692345],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_6b77d4da461afef785c34362f64e77b8.bindTooltip(
+                `<div>
+                     <strong>State:</strong> TN<br><strong>DEMOCRAT Share:</strong> 18.73%<br><strong>REPUBLICAN Share:</strong> 30.33%<br><strong>Total Votes:</strong> 6,107,702.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_12cb449207661a89ea2c68a9cdba9591 = L.circleMarker(
+                [31.054487, -97.563461],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_12cb449207661a89ea2c68a9cdba9591.bindTooltip(
+                `<div>
+                     <strong>State:</strong> TX<br><strong>DEMOCRAT Share:</strong> 23.24%<br><strong>REPUBLICAN Share:</strong> 26.03%<br><strong>Total Votes:</strong> 22,630,112.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a70576f7101ad79e3f6a5560686ae441 = L.circleMarker(
+                [40.150032, -111.862434],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_a70576f7101ad79e3f6a5560686ae441.bindTooltip(
+                `<div>
+                     <strong>State:</strong> UT<br><strong>DEMOCRAT Share:</strong> 18.82%<br><strong>REPUBLICAN Share:</strong> 29.06%<br><strong>Total Votes:</strong> 2,976,578.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1e2fe1244a581ec749d318f7773dc82b = L.circleMarker(
+                [37.769337, -78.169968],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_1e2fe1244a581ec749d318f7773dc82b.bindTooltip(
+                `<div>
+                     <strong>State:</strong> VA<br><strong>DEMOCRAT Share:</strong> 27.05%<br><strong>REPUBLICAN Share:</strong> 22.00%<br><strong>Total Votes:</strong> 8,921,048.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a17d18c19e77618c230cd03170f13fec = L.circleMarker(
+                [44.045876, -72.710686],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_a17d18c19e77618c230cd03170f13fec.bindTooltip(
+                `<div>
+                     <strong>State:</strong> VT<br><strong>DEMOCRAT Share:</strong> 32.73%<br><strong>REPUBLICAN Share:</strong> 15.19%<br><strong>Total Votes:</strong> 741,936.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a851c89067919176fb071454c49b4b49 = L.circleMarker(
+                [47.400902, -121.490494],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_a851c89067919176fb071454c49b4b49.bindTooltip(
+                `<div>
+                     <strong>State:</strong> WA<br><strong>DEMOCRAT Share:</strong> 28.99%<br><strong>REPUBLICAN Share:</strong> 19.38%<br><strong>Total Votes:</strong> 8,175,262.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_59bbf81028b73b1fca1ace6330ee2054 = L.circleMarker(
+                [44.268543, -89.616508],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_59bbf81028b73b1fca1ace6330ee2054.bindTooltip(
+                `<div>
+                     <strong>State:</strong> WI<br><strong>DEMOCRAT Share:</strong> 24.72%<br><strong>REPUBLICAN Share:</strong> 24.41%<br><strong>Total Votes:</strong> 6,596,082.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_aa5dd9c6603bb5773a6af28e9348344b = L.circleMarker(
+                [38.491226, -80.95457],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_aa5dd9c6603bb5773a6af28e9348344b.bindTooltip(
+                `<div>
+                     <strong>State:</strong> WV<br><strong>DEMOCRAT Share:</strong> 14.85%<br><strong>REPUBLICAN Share:</strong> 34.32%<br><strong>Total Votes:</strong> 1,589,304.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e326ca48e689b40a878c6751dc6fb20f = L.circleMarker(
+                [42.755966, -107.30249],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8afeb174ec69f62bf50dd5c2ad75ec87);
+        
+    
+            circle_marker_e326ca48e689b40a878c6751dc6fb20f.bindTooltip(
+                `<div>
+                     <strong>State:</strong> WY<br><strong>DEMOCRAT Share:</strong> 13.19%<br><strong>REPUBLICAN Share:</strong> 34.75%<br><strong>Total Votes:</strong> 557,006.0<br>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
