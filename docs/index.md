@@ -10,7 +10,6 @@ Let's start with a simple test, in your opinion which economy had a better perfo
 }
 ```
 
-
 Even when presented with data from all years of a President's Term in a simple format, most participants put substantially more weight on the economy in the final year of presidents’ terms.
 
 - To illustrate this behavior, consider the two examples in *Figure 1*. In the left panel, which shows Bill Clinton’s first term, growth was only moderate on average, but ends on a relatively strong note.
